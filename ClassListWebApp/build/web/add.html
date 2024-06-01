@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Add Student Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Add Student</h1>
+        <form action="AddStuServlet.do" enctype="multipart/form-data" method="POST">
+            <table>
+               
+                <tr>
+                    <td>Student Number: </td>
+                    <td><input type="text" name="stuNum" required="" /></td>
+                </tr>
+                  <tr>
+                    <td>Name: </td>
+                    <td><input type="text" name="name" required="" /></td>
+                </tr>
+                  <tr>
+                  <td>Surname: </td>
+                    <td><input type="text" name="surname" required="" /></td>
+                </tr>
+                  <tr>
+                    <td>Age: </td>
+                    <td><input type="text" name="age" required="" /></td>
+                </tr>
+                  <tr>
+                    <td>Gender: </td>
+                      <td>
+                       <select name="gender">
+                              <option value="F">F</option>
+                              <option value="M">M</option>
+                        
+                     </select></td>
+                </tr>
+                 <tr>
+                    <td>Photo: </td>
+                    <td><input type="file" name="image" required="" /></td>
+                </tr>
+                </table>
+            
+            <table id="parent_table">
+                 <tr>
+                      <td>Enter Subjects:  </td>
+                </tr>
+                <tr  id="table_row">
+                    <td><input type="text" name="subjects" required="" /></td>
+                </tr>
+            </table>
+            
+            <table>
+                <button type="button" onclick="add_row()">Add New Row</button>
+                  <button type="submit" >Submit</button>
+            </table>
+        </form>
+        
+        <script>
+            function add_row()
+            {
+                var parent_table = document.getElementById('parent_table');
+                var table_row = document.getElementById('table_row').cloneNode(true);
+                
+                table_row.removeAttribute('id');
+                parent_table.appendChild(table_row);
+            }
+        </script>
+        
+    </body>
+</html>

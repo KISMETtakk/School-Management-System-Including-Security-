@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Percentage Per Student</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Percentage Per Gender</h1>
+
+        <p>Select gender to view average age per gender:</p>
+
+        <form action="AvgAgePerGenServlet.do" method="post">
+            <table>
+          <tr>
+            <td>Gender:</td>
+              <td>
+                  <select name="option">
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit"  value="Get Result">
+            </td>
+          </tr>
+        </table>
+        </form>
+        
+    </body>
+</html>
